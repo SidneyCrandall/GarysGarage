@@ -18,11 +18,11 @@ namespace Garage
         {
             Console.WriteLine($"The {MainColor} Cessna soars through the air. Zoooooom!");
         }
+        
         // Add to the public method defined in Vehicle.cs
         public override void Turn(string Direction)
         {
             Console.WriteLine($"The Cessna tilts {Direction}. ");
-
         }
 
         // Override the public method defined in Vehicle.cs

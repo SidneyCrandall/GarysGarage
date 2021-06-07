@@ -20,7 +20,6 @@ namespace Garage
         public override void Turn(string Direction)
         {
             Console.WriteLine($"The Zero zooms {Direction} passing the cafe.");
-
         }
 
         // Override the public method defined in Vehicle.cs

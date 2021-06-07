@@ -10,6 +10,7 @@ namespace Garage
         {
             // method definition ommited
         }
+        
         public override void Drive()
         {
             Console.WriteLine($"The {MainColor} Ram growls by you. RRrrrrrummbbble!");
@@ -19,7 +20,6 @@ namespace Garage
         public override void Turn(string Direction)
         {
             Console.WriteLine($"The Ram turns {Direction} in the field.");
-
         }
 
         // Override the public method defined in Vehicle.cs
