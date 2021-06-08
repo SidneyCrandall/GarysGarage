@@ -10,7 +10,7 @@ namespace Garage
 
         public void RefuelTank()
         {
-            // method definition omitted
+            // method body omitted
         }
         
         public override void Drive()

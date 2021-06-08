@@ -13,7 +13,7 @@ namespace Garage
         // Method that for the Cessna. 
         public void RefuelTank()
         {
-            // method definition omitted
+            // method body omitted
         }
 
         // used in order to over write and enhance the Drive() method. 

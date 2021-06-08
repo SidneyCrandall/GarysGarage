@@ -10,7 +10,7 @@ namespace Garage
 
         public void ChargeBattery()
         {
-            // method definition omitted
+            // method body omitted
         }
 
         public override void Drive()
