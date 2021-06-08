@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Garage
 {
-    public interface IElectric
+    public interface IElectricVehicle
     {
         double BatteryKWh { get; set; }
         int CurrentChargePercentage { get; set; }

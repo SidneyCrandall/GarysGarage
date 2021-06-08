@@ -2,7 +2,7 @@ using System;
 
 namespace Garage
 {
-    public class Cessna : Vehicle  // Propellor light aircraft
+    public class Cessna : Vehicle , IGasVehicles // Propellor light aircraft
     {
         // Unique property that is not defined across all types of vehicles
         public double FuelCapacity { get; set; }
@@ -13,8 +13,7 @@ namespace Garage
         // Method that for the Cessna. 
         public void RefuelTank()
         {
-            Console.WriteLine("The Cessna's tank is full!");
-            CurrentTankPercentage = 100;
+            // method definition omitted
         }
 
         // used in order to over write and enhance the Drive() method. 
