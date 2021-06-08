@@ -7,10 +7,14 @@ namespace Garage
         // Unique property that is not defined across all types of vehicles
         public double FuelCapacity { get; set; }
 
-        // Proprty that is unique to the Cessna 
+        // Creating a new property that will hold value for the variable 
+        public int CurrentTankPercentage { get; set; }
+
+        // Method that for the Cessna. 
         public void RefuelTank()
         {
-            // method definition omitted
+            Console.WriteLine("The Cessna's tank is full!");
+            CurrentTankPercentage = 100;
         }
 
         // used in order to over write and enhance the Drive() method. 
