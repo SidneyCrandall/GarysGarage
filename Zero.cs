@@ -2,13 +2,15 @@ using System;
 
 namespace Garage
 {
-    public class Zero : Vehicle  // Electric motorcycle
+    public class Zero : Vehicle, IElectricVehicle  // Electric motorcycle
     {
         public double BatteryKWh { get; set; }
 
+        public int CurrentChargePercentage { get; set; }
+
         public void ChargeBattery()
         {
-            // method definition omitted
+            // method body omitted
         }
 
         public override void Drive()
@@ -20,7 +22,6 @@ namespace Garage
         public override void Turn(string Direction)
         {
             Console.WriteLine($"The Zero zooms {Direction} passing the cafe.");
-
         }
 
         // Override the public method defined in Vehicle.cs

@@ -1,5 +1,7 @@
 ﻿using System;
 
+using System.Collections.Generic;
+
 namespace Garage
 {
     class Program
@@ -7,10 +9,58 @@ namespace Garage
         static void Main(string[] args) 
         {
             // Creating properties for the vehicles
+            // added Zero FX due to new code in exercise
             Zero fxs = new Zero();
+            Zero fx = new Zero();
             Tesla modelS = new Tesla();
+
+            // Interfaces added for exercise
+            List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {
+                fxs, fx, modelS
+            };
+
+            Console.WriteLine("Electric Vehicles");
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
+
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                // This should charge the vehicle to 100%
+                ev.ChargeBattery();
+            }
+
+            foreach(IElectricVehicle ev in electricVehicles)
+            {
+                Console.WriteLine($"{ev.CurrentChargePercentage}");
+            }
+
+            /***********************************************/
             Cessna mx410 = new Cessna();
             Ram dodge22 = new Ram();
+
+            List<IGasVehicles> gasVehicles = new List<IGasVehicles>() 
+            {
+                dodge22, mx410
+            };
+
+            Console.WriteLine("Gas Vehicles");
+            foreach(IGasVehicles gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
+
+            foreach(IGasVehicles gv in gasVehicles)
+            {
+                // This should completely refuel the gas tank
+                gv.RefuelTank();
+            }
+
+            foreach(IGasVehicles gv in gasVehicles)
+            {
+                Console.WriteLine($"{gv.CurrentTankPercentage}");
+            }
 
             // Giving the vehicles color
             fxs.MainColor = "Red";
@@ -55,6 +105,7 @@ namespace Garage
             dodge22.Turn("right");
             dodge22.Stop();
             Console.WriteLine();
+
         }
     }
 }
